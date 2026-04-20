@@ -32,4 +32,12 @@ SERVICE_NAME=chatbot-service
 WORKLOAD_IDENTITY_PROVIDER=projects/<PROJECT_NUMBER>/locations/global/workloadIdentityPools/<POOL_NAME>/providers/<PROVIDER_NAME>
 ```
 
+## update OIDC
+
+```
+$ gcloud iam workload-identity-pools providers update-oidc github-provider \
+--location="global" \
+--workload-identity-pool="github-pool" \
+--attribute-condition="assertion.repository_owner=='Ranjit-Banglore'"
+```
 
