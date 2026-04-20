@@ -2,9 +2,8 @@
 Built with ❤️ using OpenAI, Streamlit, Docker and Google Cloud Run.
 
 ### 🔗 Live App
-```
-https://ai-engineering-openai-465643475320.europe-west1.run.app/
-```
+
+>👉 🌐[  https://ai-engineering-openai-465643475320.europe-west1.run.app/](https://ai-engineering-openai-465643475320.europe-west1.run.app/)
 
 ## 🏗️ Architecture Diagram
 
