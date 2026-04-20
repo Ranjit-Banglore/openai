@@ -2,7 +2,7 @@ import streamlit as st
 from llm.openai import openai
 
 
-st.set_page_config(page_title="A chatbot to create stories", page_icon="🤖")
+st.set_page_config(page_title="AI application", page_icon="🤖")
 
 st.title(" ✨ AI assistant")
 
