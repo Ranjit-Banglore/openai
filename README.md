@@ -6,12 +6,19 @@ Built with ❤️ using OpenAI, Streamlit, Docker and Google Cloud Run.
 https://ai-engineering-openai-465643475320.europe-west1.run.app/
 ```
 
+## 🏗️ Architecture Diagram
+
+>This diagram shows a simple flow of how the AI Streamlit app is working end-to-end. The user interacts with the Streamlit UI, which sends requests to the OpenAI API and returns the response back in real time. The app is packaged using Docker and deployed on Google Cloud Run. For deployment, GitHub Actions is used to automate the CI/CD pipeline, and authentication is handled securely using Workload Identity (OIDC), so no keys are required.
+<p align="center">
+  <img src="docs/architecture.png" width="800"/>
+</p>
+
 ## 🧑‍💻 Local Development
 
 ### 1. Create Virtual Environment
- create a virtual environment
+create a virtual environment
 ```
-$ python3 -m venv venv
+ $ python3 -m venv venv
 ```
 
 ### 2. Activate Environment
@@ -48,6 +55,7 @@ $ gcloud iam workload-identity-pools providers update-oidc github-provider \
 
 ## 📦 Deployment
 
-* Containerized using Docker
-* Deployed on Google Cloud Run
-* Automated via GitHub Actions CI/CD pipeline
+* > Containerized using Docker
+* > Deployed on Google Cloud Run
+* > Automated via GitHub Actions CI/CD pipeline
+
