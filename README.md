@@ -10,7 +10,7 @@ https://ai-engineering-openai-465643475320.europe-west1.run.app/
 
 >This diagram shows a simple flow of how the AI Streamlit app is working end-to-end. The user interacts with the Streamlit UI, which sends requests to the OpenAI API and returns the response back in real time. The app is packaged using Docker and deployed on Google Cloud Run. For deployment, GitHub Actions is used to automate the CI/CD pipeline, and authentication is handled securely using Workload Identity (OIDC), so no keys are required.
 <p align="center">
-  <img src="docs/architecture.png" width="800"/>
+  <img src="docs/architecture.png" width="800" style="border: 1px solid #ddd; border-radius: 10px;"/>
 </p>
 
 ## 🧑‍💻 Local Development
