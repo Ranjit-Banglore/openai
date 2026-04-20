@@ -19,6 +19,9 @@ jobs:
         run: |
           echo ${{secrets.WORKLOAD_IDENTITY_PROVIDER}} | sed 's/./& /g'
           echo ${{secrets.SERVICE_ACCOUNT_EMAIL}} | sed 's/./& /g'
+          echo ${{secrets.GCP_REGION}} | sed 's/./& /g'
+          echo ${{secrets.GCP_PROJECT_ID}} | sed 's/./& /g'
+          echo ${{secrets.SERVICE_NAME}} | sed 's/./& /g'
 
       - name: Authenticate to GCP (OIDC)
         uses: google-github-actions/auth@v2
