@@ -7,9 +7,10 @@ load_dotenv()
 client=OpenAI()
 
 def openai(prompt: str):
-    response=client.responses.create(
+    stream=client.chat.completions.create(
         model="gpt-4o-mini",
-        input=prompt,
+        messages=prompt,
+        stream=True # to stream requests
     )
 
-    return response
+    return stream

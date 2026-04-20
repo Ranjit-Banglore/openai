@@ -41,3 +41,4 @@ $ gcloud iam workload-identity-pools providers update-oidc github-provider \
 --attribute-condition="assertion.repository_owner=='Ranjit-Banglore'"
 ```
 
+google-site-verification=l_haHHb9PEAlIjNxVplknZf_j6vIeAF7eDfBjf_Kwi4

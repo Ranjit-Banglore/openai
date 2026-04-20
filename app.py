@@ -4,7 +4,9 @@ from llm.openai import openai
 
 st.set_page_config(page_title="A chatbot to create stories", page_icon="🤖")
 
-st.title("AI Chatbot")
+st.title(" AI assistant")
+
+st.subheader("Built with ❤️ using OpenAI, Streamlit, Docker and Google Cloud Run.")
 
 #store chat history
 if "messages" not in st.session_state:
@@ -27,14 +29,27 @@ if prompt := st.chat_input("Ask me anything..."):
 
     input= [ {"role": m["role"], "content": m["content"]} for m in st.session_state.messages ]
     
-    with st.spinner("Thinking..."):
-        reply=openai(input).output[0].content[0].text
+    with st.chat_message("assistant"):
+        placeholder=st.empty()
+        final_reply=""
+
+        with st.spinner("Thinking..."):
+        #reply=openai(input).output[0].content[0].text
+            stream=openai(input)
+
+            for chunk in stream:
+                delta=chunk.choices[0].delta
+                if delta.content:
+                    final_reply+=delta.content
+                    placeholder.markdown(final_reply+ "▌")
+
+            placeholder.markdown(final_reply)
 
     #show assistent msg:
-    st.chat_message("assistant").write(reply)
+    #st.chat_message("assistant").write(final_reply)
     
     #append assistant msg
-    st.session_state.messages.append({"role":"assistant", "content":reply})
+    st.session_state.messages.append({"role":"assistant", "content":final_reply})
 
 
 
