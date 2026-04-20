@@ -4,7 +4,7 @@ from llm.openai import openai
 
 st.set_page_config(page_title="A chatbot to create stories", page_icon="🤖")
 
-st.title(" AI assistant")
+st.title(" ✨ AI assistant")
 
 st.subheader("Built with ❤️ using OpenAI, Streamlit, Docker and Google Cloud Run.")
 
